@@ -24,3 +24,16 @@ for(let i = 0; i < listItems.length; i++){
 }
 
 // # 3. Créer un programme qui permet d'inverser l'ordre de deux li ! avec l'aide des inputs et du button inverser
+
+document.getElementsByTagName('input')[2].addEventListener('click', ()=>{
+    let li1 = document.getElementById('li-one').value;
+    let li2 = document.getElementById('li-two').value;
+    for(let i = 0; i < listItems.length; i++){
+        console.log(listItems[i]);
+        if(li1 == listItems[i].innerText){
+            listItems[i].innerText = li2;
+        } else if(li2 == listItems[i].innerText){
+            listItems[i].innerText = li1;
+        }
+    }
+})
